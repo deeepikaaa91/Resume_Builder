@@ -5,6 +5,8 @@ import ProfessionalE from './Pages/ProfessionalE'
 import Education from './Pages/Education'
 import Technicalskills from './Pages/Technicalskills'
 import SoftSkills from './Pages/SoftSkills'
+import Summarize from './Pages/Summarize'
+
 
 
 function App() {
