@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function PersonalD() {
+  const navigate = useNavigate()
   return (
     <div className="h-[100vh]  w-[100%] flex justify-center items-center">
       <div className="h-[60vh] w-[50%] shadow-2xl border-t-2  flex flex-col pt-[10px] pl-[50px] gap-1 border-blue-900  rounded-lg ">

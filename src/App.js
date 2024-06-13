@@ -12,7 +12,6 @@ function App() {
         <Route path="/Technicalskills" element={<Technicalskills/>}>Technicalskills</Route>
         <Route path="/" element={<PersonalD/>}>Technicalskills</Route>
         <Route path="/SoftSkills" element={<SoftSkills/>}>Technicalskills</Route>
-
       </Routes>
     </HashRouter>
   )
