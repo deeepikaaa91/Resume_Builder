@@ -5,6 +5,7 @@ import ProfessionalE from './Pages/ProfessionalE'
 import Education from './Pages/Education'
 import Technicalskills from './Pages/Technicalskills'
 import SoftSkills from './Pages/SoftSkills'
+import PersonalD from './Pages/PersonalD'
 
 
 function App() {
@@ -17,6 +18,12 @@ function App() {
         <Route path="/Technicalskills" element={<Technicalskills/>}></Route>
         <Route path="/SoftSkills" element={<SoftSkills/>}></Route>
     </Routes>
+        <Route path="/Technicalskills" element={<Technicalskills/>}></Route>
+        <Route path="/" element={<PersonalD/>}></Route>
+        <Route path="/SoftSkills" element={<SoftSkills/>}></Route>
+        <Route path="/summarize" element={<Summarize/>}></Route>
+
+      </Routes>
     </HashRouter>
   )
 }
