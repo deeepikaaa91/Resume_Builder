@@ -8,7 +8,6 @@ import SoftSkills from './Pages/SoftSkills'
 import Summarize from './Pages/Summarize'
 
 
-
 function App() {
   return (
     <HashRouter>
