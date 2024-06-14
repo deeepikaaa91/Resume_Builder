@@ -1,10 +1,17 @@
-import React from "react";
+import React, { Children, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { ContextStore } from "./Mycontext";
+
 
 function PersonalD() {
+  const{click,setClick} = useContext(ContextStore)
   const navigate = useNavigate();
   return (
     <div className="h-[100vh]  w-[100%] flex justify-center items-center">
+      <div>
+        {click}
+        <button onClick={()=>setClick(click+1)}>press</button>
+      </div>
       <div className="h-[60vh] w-[50%] shadow-2xl border-t-2  flex flex-col pt-[10px] pl-[50px] gap-1 border-blue-900  rounded-lg ">
         <h1 className="font-bold ">Personals Details</h1>
         <p>Get started with the basics:your name and contact information.</p>
