@@ -1,12 +1,21 @@
 import React, { useState } from "react";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
+
 function ProfessionalE() {
+  const {click, setClick} = useContext(ContextStore)
+
   const navigate = useNavigate();
   const [professionalEx ,setProfessionalEx] = useState({})
   return (
    <div className="h-[100vh]  w-[100%] flex justify-center items-center">
     {JSON.stringify(professionalEx)}
+    <div className="h-[100vh]  w-[100%] flex justify-center items-center">
+      <div>
+        {click}
+        <button onClick={()=>setClick(click+1)}>press</button>
+      </div>
       <div className="h-[70vh] w-[50%] shadow-2xl border-t-2  flex flex-col pt-[10px] pl-[50px] gap-1 border-red-400  rounded-lg ">
         <h1 className="font-bold ">Professional Experience</h1>
         <p>Tell us about your most recent job.</p>
