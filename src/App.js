@@ -6,13 +6,12 @@ import Education from './Pages/Education'
 import SoftSkills from './Pages/SoftSkills'
 import Summarize from './Pages/Summarize'
 import Resume from './Pages/Resume'
+import Project from './Pages/Project'
 
-import Mycontext from './Pages/Mycontext'
 
 
 function App() {
   return (
-    // <Mycontext>
     <HashRouter>
       <Routes>
         <Route path="/" element={<PersonalD/>}></Route>
@@ -21,9 +20,9 @@ function App() {
         <Route path="/SoftSkills" element={<SoftSkills/>}></Route> 
         <Route path="/summarize" element={<Summarize/>}></Route>
         <Route path="/resume" element={<Resume/>}></Route>
+        <Route path="/project" element={<Project/>}></Route>
       </Routes>
     </HashRouter>
-    // </Mycontext>
   )
 }
 export default App;
