@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 function Technicalskills() {
   const navigate = useNavigate();
   const [moreDiv, setMoreDiv] = useState([])
+  const[technicalSkill,setTechnicalSkill] = useState({})
 
   const moreskills=()=>{
     setMoreDiv([...moreDiv,moreDiv])
@@ -11,6 +12,7 @@ function Technicalskills() {
 
   return (
     <div className="h-[100vh]  w-[100%] flex  justify-center items-center ">
+    {JSON.stringify(technicalSkill)}
       <div className=" w-[50%] shadow-2xl border-t-2  flex flex-col pt-[10px] pl-[50px] gap-3 border-blue-400  rounded-lg ">
         <h1 className="font-bold ">Technical Skills</h1>
         <p>Add relevant professional key skills and proficiencies</p>
@@ -18,7 +20,7 @@ function Technicalskills() {
           <div className="flex flex-col gap-3">
           <div className="h-[10vh] w-[90%] flex  pl-[10px] items-center border-[1px]  gap-2">
               <label>Skill</label>
-              <input
+              <input onChange={(e)=>setTechnicalSkill({...technicalSkill,skill:e.target.value})}
                 className="border-[1px] border-black outline-none h-[4vh] w-[80%]"
                 type="text"
               ></input>
@@ -26,7 +28,7 @@ function Technicalskills() {
           {moreDiv.map((i)=>{
             <div className="h-[10vh] w-[90%] flex  pl-[10px] items-center border-[1px]  gap-2">
               <label>Skill</label>
-              <input
+              <input onChange={(e)=>setTechnicalSkill({...Technicalskills,skill:e.target.value})}
                 className="border-[1px] border-black outline-none h-[4vh] w-[80%]"
                 type="text"
               ></input>

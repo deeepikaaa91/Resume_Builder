@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function ProfessionalE() {
   const navigate = useNavigate();
-
+  const [professionalEx ,setProfessionalEx] = useState({})
   return (
-    <div className="h-[100vh]  w-[100%] flex justify-center items-center">
+   <div className="h-[100vh]  w-[100%] flex justify-center items-center">
+    {JSON.stringify(professionalEx)}
       <div className="h-[70vh] w-[50%] shadow-2xl border-t-2  flex flex-col pt-[10px] pl-[50px] gap-1 border-red-400  rounded-lg ">
         <h1 className="font-bold ">Professional Experience</h1>
         <p>Tell us about your most recent job.</p>
@@ -13,14 +14,14 @@ function ProfessionalE() {
           <div className="flex">
             <div className="h-[10vh] w-[50%] flex flex-col">
               <label>Position Title</label>
-              <input
+              <input onChange={(e)=>setProfessionalEx({...professionalEx, positionTitle:e.target.value})}
                 className="border-[1px] border-black outline-none h-[4vh] w-[80%]"
                 type="text"
               ></input>
             </div>
             <div className="h-[10vh] w-[50%]  flex flex-col">
               <label>Company Name</label>
-              <input
+              <input onChange={(e)=>setProfessionalEx({...professionalEx, companyName:e.target.value})}
                 className="border-[1px] border-black outline-none h-[4vh] w-[80%]"
                 type="text"
               ></input>
@@ -29,14 +30,14 @@ function ProfessionalE() {
           <div className="flex">
             <div className="h-[10vh] w-[50%] flex flex-col">
               <label>city</label>
-              <input
+              <input onChange={(e)=>setProfessionalEx({...professionalEx,city:e.target.value})}
                 className="border-[1px] border-black outline-none h-[4vh] w-[80%]"
                 type="text"
               ></input>
             </div>
             <div className="h-[10vh] w-[50%]  flex flex-col">
               <label>State</label>
-              <input
+              <input onChange={(e)=>setProfessionalEx({...professionalEx,state:e.target.value})}
                 className="border-[1px] border-black outline-none h-[4vh] w-[80%]"
                 type="text"
               ></input>
@@ -46,14 +47,14 @@ function ProfessionalE() {
           <div className="flex">
             <div className="h-[10vh] w-[50%] flex flex-col">
               <label>start Date</label>
-              <input
+              <input onChange={(e)=>setProfessionalEx({...professionalEx,startDate:e.target.value})}
                 className="border-[1px] border-black outline-none h-[4vh] w-[80%]"
                 type="text"
               ></input>
             </div>
             <div className="h-[10vh] w-[50%] flex flex-col">
               <label>End Date</label>
-              <input
+              <input onChange={(e)=>setProfessionalEx({...professionalEx,endDate:e.target.value})}
                 className="border-[1px] border-black outline-none h-[4vh] w-[80%]"
                 type="text"
               ></input>
