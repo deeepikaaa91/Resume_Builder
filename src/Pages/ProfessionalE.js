@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 
 
 function ProfessionalE() {
-
   const navigate = useNavigate();
   const [professionalEx ,setProfessionalEx] = useState({})
   return (
