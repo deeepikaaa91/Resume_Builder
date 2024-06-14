@@ -1,24 +1,20 @@
 import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { ContextStore } from "./MyContext";
 function Education() {
 
-  const {click, setClick} = useContext(ContextStore)
   const navigate = useNavigate();
   const [educationObj, setEducationObj] = useState({})
 
   return (
     <div className="h-[100vh]  w-[100%] flex justify-center items-center">
     <div>
-      {click}
-      <button onClick={()=>setClick(click+1)}>Press</button>
     </div>
       <div className="w-[50%] shadow-2xl border-t-2   flex flex-col py-[1%] px-[4%] gap-2 border-green-400  rounded-lg ">
         <h1 className="font-bold ">Education</h1>
-        <p>
+         <p>
           Add your most relevant educations,including program you,re currently
           enrolled in.
-        </p>
+         </p>
         <div className=" w-[100%] flex flex-col gap-2 ">
           <div className="flex  gap-10 justify-between">
             <div className="h-[10vh] w-[50%] flex flex-col">
