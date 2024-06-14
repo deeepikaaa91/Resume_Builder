@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { ContextStore } from "./MyContext";
+
 
 
 function ProfessionalE() {
@@ -92,6 +94,7 @@ function ProfessionalE() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }
