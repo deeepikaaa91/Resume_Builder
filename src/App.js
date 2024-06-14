@@ -7,7 +7,7 @@ import Technicalskills from './Pages/Technicalskills'
 import SoftSkills from './Pages/SoftSkills'
 import Summarize from './Pages/Summarize'
 import Resume from './Pages/Resume'
-import Mycontext, { ContextStore } from './Pages/Mycontext'
+import Mycontext from './Pages/Mycontext'
 
 
 function App() {
