@@ -7,8 +7,7 @@ import SoftSkills from './Pages/SoftSkills'
 import Summarize from './Pages/Summarize'
 import Resume from './Pages/Resume'
 import Project from './Pages/Project'
-
-
+import Technicalskills from './Pages/Technicalskills'
 
 function App() {
   return (
@@ -21,7 +20,9 @@ function App() {
         <Route path="/summarize" element={<Summarize/>}></Route>
         <Route path="/resume" element={<Resume/>}></Route>
         <Route path="/project" element={<Project/>}></Route>
-      </Routes>
+        <Route path="/technicalskills" element={<Technicalskills/>}></Route>
+
+    </Routes>
     </HashRouter>
   )
 }

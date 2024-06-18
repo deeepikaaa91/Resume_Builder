@@ -10,11 +10,25 @@ function Project() {
       setMoreDiv([...moreDiv, null])
     }
   return (
-    <div className="h-[100vh]  w-[100%] flex  justify-center items-center ">
-    <div className=" w-[50%] shadow-2xl border-t-2  flex flex-col py-[2%] px-[4%] gap-3 border-blue-400  rounded-lg ">
+    <div className="h-[100vh]  w-[100%] flex  flex-col justify-center gap-2 items-center ">
+     <div className="flex w-[40%] justify-end gap-2 pr-[20px]">
+            <button
+              onClick={() => navigate("/Education")}
+              className="h-[5vh] w-[15%]  bg-[red] text-white  rounded-2xl  "
+            >
+              Back
+            </button>
+            <button
+              onClick={() => navigate("/resume")}
+              className="h-[5vh] w-[20%]  bg-[red] text-white  rounded-2xl  "
+            >
+            Create Resume
+            </button>
+          </div>
+    <div className=" w-[40%] shadow-2xl border-t-2  flex flex-col py-[2%] px-[4%] gap-3 border-blue-400  rounded-lg ">
       <h1 className="font-bold ">Projects</h1>
       <p>Add relevant professional Projects</p>
-      <div className="flex  gap-10 justify-between">
+      <div className="flex   gap-10 justify-between">
             <div className="h-[10vh] w-[50%] flex flex-col">
               <label>Project Name</label>
              
@@ -47,7 +61,7 @@ function Project() {
               + Add More Skills
             </button>
           </div>
-          <div className="flex w-[100%] justify-end gap-2 pr-[20px]">
+          {/* <div className="flex w-[100%] justify-end gap-2 pr-[20px]">
             <button
               onClick={() => navigate("/Education")}
               className="h-[5vh] w-[15%]  bg-[red] text-white  rounded-2xl  "
@@ -60,7 +74,7 @@ function Project() {
             >
              Create Resume
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
