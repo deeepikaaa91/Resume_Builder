@@ -1,36 +1,43 @@
 import React from "react";
 
 function Resume() {
+  const personalDetail = JSON.parse(localStorage.getItem("personaldetail"))
+  const professionalEx = JSON.parse(localStorage.getItem("professionalexp"))
+  const education = JSON.parse(localStorage.getItem("Education"))
+  const project = JSON.parse(localStorage.getItem("project"))
+  const softSkills = JSON.parse(localStorage.getItem("softskills"))
+  const summarise = JSON.parse(localStorage.getItem("summarise"))
+  const technical = JSON.parse(localStorage.getItem("technical"))
   return (
     <div className="w-[100%] h-[100vh] flex items-center justify-center">
       <div className="w-[40%] h-[100vh] shadow-xl ">
         <div className="w-[100%] py-2 bg-rose-400 flex flex-col justify-center px-6">
-          <h1 className="text-[30px] font-bold text-[white] ">
-            VAISHNAVI PATIL
+          <h1 className="text-[30px] uppercase font-bold text-[white] ">
+            {personalDetail.firstName} {personalDetail.lastName}
           </h1>
           <label className="text-[17px] text-[white]">
-            frontent web devleoper
+           {personalDetail.jobTile}
           </label>
         </div>
         <div className="flex w-[100%]">
           <div className="w-[60%] flex flex-col  py-2  px-4">
             
             <h1 className="font-semibold text-rose-400 w-[55%] border-b-2 border-rose-400">
-              My contact
+              My Contact
             </h1>
 
             <div className="w-[100%] flex flex-col py-2">
               <div className="w-[100%] flex items-center  gap-1">
                 <i class="fa fa-envelope-o text-[12px]" aria-hidden="true"></i>
-                <label className="text-[11px]">vaishnavipatil@gmail.com</label>
+                <label className="text-[11px]">{personalDetail.emailAddress}</label>
               </div>
               <div className="w-[100%] flex items-center  gap-1">
                 <i class="fa fa-phone text-[12px]" aria-hidden="true"></i>
-                <label className="text-[12px]">+91 9934568974</label>
+                <label className="text-[12px]">{personalDetail.phone}</label>
               </div>
               <div className="w-[100%] flex items-center  gap-1">
                 <i class="fa fa-map-marker text-[12px]" aria-hidden="true"></i>
-                <label className="text-[11px]">Indore M.P</label>
+                <label className="text-[11px]">{personalDetail.address}</label>
               </div>
             </div>
 
@@ -70,15 +77,15 @@ function Resume() {
               <h1 className="font-semibold text-rose-400 w-[90%] border-b-2 border-rose-400">
                 Education Background
               </h1>
-              <div className="flex flex-col gap-2 w-[100%] py-2">
-                <label className="text-[10px]">
-                  .  Acropolis institute of management studies and
-                     research,indore Bechelor of computer Application in 2024
-                </label>
-                <label className="text-[10px]">
-                  .  Saraswati Vidhya Mandir PCM completed in 2021{" "}
-                </label>
+              <div>
+              {education.map((i)=>
+              <div className="flex flex-col w-[100%] py-2 text-[12px]">
+                <li>{i.schoolName}, {i.schoolLocation}</li>
+                <label className="ml-[10%]">{i.field}</label>
+                <label className="ml-[10%]">Complete in {i.endDate}</label>
+              </div>)}
               </div>
+              
             </div>
           </div>
           <div className="w-[100%] flex flex-col  py-2  px-4">

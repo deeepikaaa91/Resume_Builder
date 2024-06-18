@@ -1,14 +1,14 @@
-import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Project() {
-    const navigate = useNavigate()
-    const [projectObj,setProjectObj] = useState({})
-    const [moreDiv, setMoreDiv] = useState([null])
-  
-    const moreskills=()=>{
-      setMoreDiv([...moreDiv, null])
-    }
+  const navigate = useNavigate();
+  const [projectObj, setProjectObj] = useState({});
+  const [moreDiv, setMoreDiv] = useState([null]);
+
+  const moreskills = () => {
+    setMoreDiv([...moreDiv, null]);
+  };
   return (
     <div className="h-[100vh]  w-[100%] flex  flex-col justify-center gap-2 items-center ">
      <div className="flex w-[40%] justify-end gap-2 pr-[20px]">
@@ -82,4 +82,4 @@ function Project() {
   )
 }
 
-export default Project
+export default Project;

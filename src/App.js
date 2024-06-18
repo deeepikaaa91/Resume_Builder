@@ -18,6 +18,7 @@ function App() {
         <Route path="/Education" element={<Education/>}></Route>
         <Route path="/SoftSkills" element={<SoftSkills/>}></Route> 
         <Route path="/summarize" element={<Summarize/>}></Route>
+        <Route path="/TechnicalSkills" element={<TechnicalSkills/>}></Route>
         <Route path="/resume" element={<Resume/>}></Route>
         <Route path="/project" element={<Project/>}></Route>
         <Route path="/technicalskills" element={<Technicalskills/>}></Route>

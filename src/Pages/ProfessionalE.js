@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 
 
 function ProfessionalE() {
-
   const navigate = useNavigate();
   const [professionalEx ,setProfessionalEx] = useState({})
   return (
@@ -21,7 +20,7 @@ function ProfessionalE() {
               Back
             </button>
             <button
-              onClick={() => navigate("/Education")}
+              onClick={() => {localStorage.setItem("professionalexp", JSON.stringify(professionalEx)) ; navigate("/Education")}}
               className="h-[5vh] w-[15%]  bg-[red] text-white  rounded-2xl  "
             >
               Next

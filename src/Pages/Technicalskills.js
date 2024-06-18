@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 function Technicalskills() {
   const navigate = useNavigate();
@@ -57,4 +57,4 @@ function Technicalskills() {
   );
 }
 
-export default Technicalskills;
+export default TechnicalSkills
