@@ -14,7 +14,6 @@ function PersonalD() {
         <p>Get started with the basics:your name and contact information.</p>
         <div className="h-[50vh] w-[100%]  flex flex-col gap-2 ">
           <div className="flex">
-          {JSON.stringify(information)}
             <div className="h-[10vh] w-[50%] flex flex-col">
               <label>First Name</label>
               <input onChange={(e)=>setInformation({...information, firstName : e.target.value})}
@@ -62,7 +61,7 @@ function PersonalD() {
           </div>
           <div className="w-[100%]   flex justify-end pr-[100px] ">
             <button
-              onClick={() => {navigate("/ProfessionalE")}}
+              onClick={() => {localStorage.setItem("personaldetail", JSON.stringify(information)) ;navigate("/ProfessionalE")}}
               className="h-[5vh] w-[15%]  bg-[red] text-white  rounded-2xl  "
             >
               Next

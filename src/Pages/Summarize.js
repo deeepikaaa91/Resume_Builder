@@ -13,7 +13,7 @@ function Summarize() {
         <div className='w-[100%] h-[40vh] '>
         <textarea  onChange={(e)=>setSummarize({...summarize,text:e.target.value})} className='w-[100%] h-[40vh] border p-4' placeholder='e.g. Dedicated [High School] Teacher with [7] years of experience…'></textarea>
         </div>
-        <button onClick={()=>navigate('/project')} className='w-[15%] h-[6vh] rounded-2xl bg-[red] flex self-end items-center justify-center text-white'>Next</button>
+        <button onClick={()=>{localStorage.setItem("summarise",JSON.stringify(summarize));navigate('/project')}} className='w-[15%] h-[6vh] rounded-2xl bg-[red] flex self-end items-center justify-center text-white'>Next</button>
 
 
       </div>

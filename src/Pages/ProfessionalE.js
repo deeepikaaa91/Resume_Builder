@@ -80,7 +80,7 @@ function ProfessionalE() {
               Back
             </button>
             <button
-              onClick={() => navigate("/Education")}
+              onClick={() => {localStorage.setItem("professionalexp", JSON.stringify(professionalEx)) ; navigate("/Education")}}
               className="h-[5vh] w-[15%]  bg-[red] text-white  rounded-2xl  "
             >
               Next
